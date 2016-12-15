@@ -1,6 +1,8 @@
 /**
  * Reedsy Book published date
  *
+ * TODO: inject moment dependency properly
+ * @returns moment.js date string
  */
 (function() {
     

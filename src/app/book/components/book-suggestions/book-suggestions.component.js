@@ -2,7 +2,7 @@
  * Reedsy Book suggestions
  *
  * Displays 3 recommended books from a similar genre and category
- * as the supplied book-id 
+ * as the supplied in book array 
  */
 (function() {
     

@@ -1,6 +1,7 @@
 /**
  * Reedsy Book Service
  *
+ * Mock api service using a local JSON file
  */
 (function() {
     
@@ -41,6 +42,8 @@
 
         /**
          * Return a list of books
+         *
+         * @param {string} query - search term to match against book name or author
          */
         self.list = function (query){
             
@@ -65,7 +68,9 @@
         };
 
         /**
-         * Return 3 recommended books
+         * Return 3 recommended books 
+         *
+         * @param {string} id - id of the book to query against
          */
         self.recommend = function (id){
             
@@ -111,6 +116,9 @@
 
         /**
          * Return all genre categories
+         *
+         * Extract categories and genres from the book json
+         * @returns { category: [generes], category: [genres] }
          */
         self.categories = function (){
             

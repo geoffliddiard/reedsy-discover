@@ -1,6 +1,7 @@
 /**
- * Reedsy Book component
+ * Reedsy Book List component
  *
+ * Displays a paginated list of books that can be filtered 
  */
 (function() {
     

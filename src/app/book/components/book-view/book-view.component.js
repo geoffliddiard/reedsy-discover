@@ -1,6 +1,7 @@
 /**
  * Reedsy Book component
  *
+ * Displays a detailed view of a Book and 3 suggested/recommended titles
  */
 (function() {
     
