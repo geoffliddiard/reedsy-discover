@@ -1,0 +1,25 @@
+{
+  "name": "reedsy-discover",
+  "version": "1.0.0",
+  "description": "",
+  "author": "geoff.liddiard",
+  "private": true,
+  "scripts": {
+    "start": "ws -p 3000 -n -d ./src -s index.html"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-stylus": "^2.5.0",
+    "jeet": "^6.1.5",
+    "jshint": "^2.9.3",
+    "kouto-swiss": "^0.14.0",
+    "local-web-server": "^1.2.6",
+    "run-sequence": "^1.2.2",
+    "rupture": "^0.6.1"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}

@@ -1,0 +1,51 @@
+// <book> component styles
+.book-card
+    background $white
+    border 1px solid $light-grey
+    border-radius 5px
+    margin 0 0 40px
+    transition .25s ease-out
+    backface-visibility hidden
+    
+    &:hover
+        box-shadow 0 10px 5px rgba($black, 0.25)
+        transform scale(1.025)
+        cursor pointer
+                
+    .inner
+        padding 10px
+        
+        .cover
+            position relative
+            ratio-box(500/700)
+            background-color $light-grey
+            background-image url('../img/parrot-white.png')
+            background-position center center
+            background-repeat no-repeat
+            background-size 50%
+            
+            img 
+                position absolute
+                top 0
+                left 0
+        
+        .details
+            margin 15px 0
+            .name
+                font-size em(16px)
+                margin 0 0 5px
+            .author
+                font-size em(12px)
+                
+        .stats
+            font-size em(12px)
+            clearfix()
+            
+            .likes
+                float left
+                i
+                    color $red
+                    padding-right 4px
+                    
+            .published
+                float right

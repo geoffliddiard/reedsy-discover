@@ -1,0 +1,42 @@
+<div class="book-list">
+    <div class="controls">
+        <div class="filters">
+            <label>Find me the best</label>
+            <div class="select-wrapper">
+                <select
+                    name="category"
+                    ng-model="$ctrl.category"
+                    ng-change="$ctrl.changeCategory()">
+                    <option ng-repeat="(key, value) in $ctrl.categories" value="{{key}}">{{key}}</option>
+                </select>
+                <i class="icon-angle-down"></i>
+            </div>
+            <label>books about</label>
+            <div class="select-wrapper">
+                <select
+                    name="genre"
+                    ng-disabled="!$ctrl.category"
+                    ng-model="$ctrl.genre"
+                    ng-change="$ctrl.changeGenre()"
+                    ng-options="option for option in $ctrl.categories[$ctrl.category]">
+                    <option value="">Anything</option>
+                </select>
+                <i class="icon-angle-down"></i>
+            </div>
+        </div>
+        <div class="search-wrapper">
+            <search-field ng-model="$ctrl.query" on-search="$ctrl.fetchBooks" placeholder="Search books"></search-field>
+            <i class="icon-search"></i>
+        </div>
+    </div>
+    <div class="inner">
+        <div class="item" ng-repeat="book in $ctrl.list = ($ctrl.books | filter: {genre: {category: $ctrl.category}} : true | filter: {genre: {name: $ctrl.genre || ''}}) | limitTo:$ctrl.limit:$ctrl.offset">
+            <book-card book="book"></book-card>
+        </div>
+    </div>
+    <div class="pagination">
+        <span>Page {{ $ctrl.page }} of {{ $ctrl.setMaxPage($ctrl.list.length) }}</span>
+        <button ng-click="$ctrl.page = $ctrl.page-1" ng-disabled="$ctrl.page == 1">Prev</button>
+        <button ng-click="$ctrl.page = $ctrl.page+1" ng-disabled="$ctrl.page == $ctrl.maxPage">Next</button>
+    </div>
+</div>

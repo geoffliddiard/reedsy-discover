@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rd">
+<head>
+    <meta charset="utf-8">
+    <title>Discover | Reedsy</title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="icon-32.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Merriweather">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+    <main ng-view autoscroll="true"></main>
+
+    <!-- Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+
+    <!-- App -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/book/book.module.js"></script>
+    <script src="app/book/book.config.js"></script>
+    <script src="app/book/services/book.service.js"></script>
+    <script src="app/book/filters/published-date.js"></script>
+    <script src="app/book/components/book-list/book-list.component.js"></script>
+    <script src="app/book/components/book-list/book-list.controller.js"></script>
+    <script src="app/book/components/book-view/book-view.component.js"></script>
+    <script src="app/book/components/book-card/book-card.component.js"></script>
+    <script src="app/book/components/book-card/book-card.controller.js"></script>
+    <script src="app/book/components/book-suggestions/book-suggestions.component.js"></script>
+    <script src="app/shared/directives/search-field.js"></script>
+    
+</body>
+</html>

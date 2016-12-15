@@ -1,0 +1,13 @@
+<div class="book-suggestions">
+    <div class="inner">
+        <header>
+            <h2>Similar reading</h2>
+            <h4>If you liked this book, we recommend you check out these emerging titles.</h4>
+        </header>
+        <div class="books">
+            <div class="item" ng-repeat="book in ::vm.books">
+                <book-card book="book"></book-card>
+            </div>
+        </div>
+    </div>
+</div>

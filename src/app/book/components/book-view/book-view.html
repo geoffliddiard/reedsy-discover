@@ -1,0 +1,37 @@
+<div class="book-view">
+    <div class="summary">
+        <div class="inner">
+            <div class="pic">
+                <div class="cover">
+                    <img ng-src="{{ ::$ctrl.book.cover }}">
+                </div>
+            </div>
+            <div class="details">
+                <h2 class="name">{{ ::$ctrl.book.name }}</h2>
+                <span class="author">{{ ::'By ' + $ctrl.book.author.name }}</span>
+                <p class="description">{{ ::$ctrl.book.description }}</p>    
+                <div class="stats">
+                    <span class="likes"><i class="icon-heart"></i> {{ ::$ctrl.book.likes }}</span> | <span class="published">{{ ::($ctrl.book.published | publishedDate) }}</span>
+                </div>
+                <div class="categories">
+                    <h4>Categories:</h4>
+                    <a class="tag" href="/books?category={{ ::$ctrl.book.genre.category }}">{{ ::$ctrl.book.genre.category }}</a>
+                    <a class="tag" href="/books?category={{ ::$ctrl.book.genre.category }}&genre={{ ::$ctrl.book.genre.name }}">{{ ::$ctrl.book.genre.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="introduction">
+        <div class="inner">
+            <h3>Introduction</h3>
+            <p ng-repeat="paragraph in ::$ctrl.book.introduction">{{ ::paragraph.content }}</p>
+            <hr>
+            <footer>
+                <div class="author">
+                    <img class="avatar" ng-src="{{ ::$ctrl.book.author.avatar }} ">
+                    <span class="name">{{ ::'Written by: ' + $ctrl.book.author.name }}</span>
+                </div>
+            </footer>
+        </div>
+    </article>  
+</div>

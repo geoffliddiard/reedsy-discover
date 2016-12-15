@@ -1,0 +1,15 @@
+<div class="book-card" ng-click="::vm.view(vm.book.id)">
+    <div class="inner">
+        <div class="cover">
+            <img ng-src="{{ ::vm.book.cover }}">
+        </div>
+        <div class="details">
+            <h2 class="name">{{ ::vm.book.name }}</h2>
+            <span class="author">{{ ::'By ' + vm.book.author.name }}</span>
+        </div>
+        <div class="stats">
+            <span class="likes"><i class="icon-heart"></i> {{ ::vm.book.likes }}</span>
+            <span class="published">{{ ::vm.book.published | publishedDate }}</span>
+        </div>
+    </div>
+</div>
