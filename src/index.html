@@ -2,9 +2,9 @@
 <html lang="en" ng-app="rd">
 <head>
     <meta charset="utf-8">
-    <title>Discover | Reedsy</title>
+    <title>{{ metadata.title || 'Discover | Reedsy' }}</title>
     <base href="/">
-    <meta name="description" content="">
+    <meta name="description" content="{{ metadata.description || 'Discover books on Reedsy' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="icon-32.png" type="image/png">
@@ -27,6 +27,7 @@
     <!-- App -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
+    <script src="app/app.run.js"></script>
     <script src="app/book/book.module.js"></script>
     <script src="app/book/book.config.js"></script>
     <script src="app/book/services/book.service.js"></script>
